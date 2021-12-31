@@ -1,0 +1,273 @@
+
+
+rules{
+property:value
+}
+example:
+section{
+baclk-color:red
+}
+
+href="subfolder/name"
+
+
+so the font which u import should alwasy be placed above the likn tag of the file 
+for ecample
+<link import
+<link main.ts
+
+
+universal selector * : you style every elemnt on your page.
+
+priorities:
+inline 
+#id selectors
+.class pseduo {attrivute]
+<tag> and universal
+
+combinator use to combine multiple selecctor and has highewr specificty than h1
+
+More specific rule has the higher specificty
+
+Adjacent sibling-combinators
+
+1 em = 16px
+2 rem means 2 times the root elemnt size (html) set by the browser
+
+
+h2+p h2 follwoed by p tag 
+if there is h3 in between for example: h2 h3 p then it fails
+
+now ot turn the container to circle we can use border-radius
+hweight should match with the widht so that firs t you covert it into box then to circle
+
+margin auto will aitomatically fill the available spcae to the left and right to ceter the element horizontally.
+
+General sibling-combinators
+h2~p is vice versa of adjacent doesnt has to be follwed.
+
+
+div>p:
+p should be direct child of div
+
+descendant div p
+there should be just a div class above the p tag doesnt have to be direct child
+
+
+shorthand property
+border: 2px dashed orange 
+order here doesnt matter
+
+margin: 5px(top and bottom) 10px(left and right)
+margin:10px  (all side same)
+
+In the case where you have anchor tag direct child an item with a class
+
+Pseudo code  using   .main__nav-item a:
+hover is one of many pseduo class we wanna attach
+Beforea fter pseduo elemnt to add helper icon
+for example: Home(link)
+
+float is great for psoitioning image in text.
+
+.clear{
+clear:both}
+it clears the float to keep the element in the place.
+
+
+
+  /*Grouping Rules*/
+
+.main-nav__item a:hover,
+.main-nav__item a:active{
+    color:white;                                
+}
+
+You can add multiple class to single element
+
+background:url method
+
+url(subfolder/)
+
+
+margin  :spacing around the box.
+color:content
+
+For inline elements : margin-top and botoom dont have a effect.
+box-sizzing : (default)content-box with that you style only the content of the box.
+
+inheritance is always over written  by direct style assignment for example .button{
+font:
+
+text field and button inout both handle input fields
+inherit forces the inherited styles to be applied.
+}
+border box targets content border padding.
+
+
+Inside the block if u have elemnts which are not center  and whic are inline block then you can simply use text-align:center
+
+
+###########Position###########
+view port is the area of your web page.
+
+
+Image out of the document flow.###########
+so when u apply posiiton fixed then for other elemnts the elemnt on which u applied wont exist.
+
+changing the widht for inline has no impact
+for default(static) : it won't get applied (top right bottom left)
+
+No matter if u have inline or block level element you can apply the position property
+
+As you as you add margin to the html element or to the body elemnt or basically any parent elelmnt of your header then you need to add top left righjt bottom.
+
+z-index:auto=0
+if the elemnt is not having a position property(I.e by default  static ) then it wont have nay effect
+
+
+fixed : psoitioning is always the view port
+
+
+absolute : if the ancestor doesnt have the position property then it will depend on the html
+if we have ancestor then 
+
+
+relative:
+positioning contxt is the elemnt itself
+the element is pushed 50 px left or rigght ...from its(wrt) current position.
+
+
+default behaviour : of CSS
+If u aplly overflow:hidden to body  then it gets passed onto the html
+and therefore it wont be present in body.
+
+sticky is a combination of relative and fixed.
+we can specify the distance between view-port and the elemnt
+
+The positioning of the parent element has nothing to do
+zindiex is applide only when psoition prop is applied
+
+
+Stacking context is created when applying fixed/sticky or absolute/relative in combination zindex specified by us.
+
+
+You always need to mention the width and the height of image.
+background size - ####
+is u dont adjust the height it automatically keeps it to aspect ratio
+background-size keyword cover : it sets the width to container width
+
+contain: image doesn't fill the entire container but it ensures that the entire inage is possible no matter if there is white space in the contianer
+
+background-position:left top( 0 0% ) it means no cropping at left and at the top
+center mean 50 50 
+you can also combine it with % as well.
+for example: left 10% bottom 20%
+
+background-attachment : it defines how to scrolling will behave inside of the image
+
+content box means content without padding and border
+padding-box:the contaINER inculdung  contetn adn padding  but not border
+
+backgorunfd clip we define where the image should be clipped if necessary.
+
+using short hand property we need to add it only once if have similar property
+
+if u enter an img tag and you point to an image.
+then the default height and width will be used and entered in the document.
+% values on img dont help us here.
+because they dont respect the surronding container.
+
+
+######
+with images it depends on whether you use it in an inline elemnt in whic 100% will simply use the default dimension of image. but in case of inline-blick or block elemnt where it will use container height or widht.
+
+
+if u got an image in surrounding container sue vertical align top to remove the white space
+
+Gradients both linear and radiant are treated as images.
+
+libear gradient( direction , color ,transparent)
+(180deg, red 70% (it will take 70% of the gradient), blue 80%(it will take upto 80% of the gradient) ,
+ rgba)
+after 80% of the gradient blue will be also done.
+
+
+background-image:radial-gradient(circle 20px at 20% 50% ,red,blue,green
+ after circle its the size hich is defined at the psoition(20 from x(left) and 50 from top)
+with two values you can also shape ellipse
+
+ellips farthest-side
+
+only one background color may be used
+linear gradinet is also an image and hterefore images need to be seperated by ,
+
+scalable vector graphics (SVG) : form of images
+
+fill and stroke are the most imp properties in svg
+
+for filter aleasy provde fallbacks or use polyfills
+
+The containig block depends on the position of the child element, and if it is fixed then the containing block(parent block) is not an element its the viewport.
+
+whenever we have position fixed property and percentage unit applied to an element then the CONTAINING BLOCK IS THE VIEWPORT.
+
+postion:absolute
+element % refers to the ancestor content+padding
+
+position:static/relative
+element % refers to the ancestor but now just content 
+block level element
+
+Position static won't allow you to add zindex therefore u can use relative
+
+
+vw vh always refer to the view port is jsut the same as 100% width of viewport
+no matter which position property we have here.
+
+vmin refers to the widht or height depending on which is the shortest. for example 80% of the view-port height if it's small
+and viceversa for vmax
+
+cennter elements perfeclty using margin: auto (works for block level elements)
+
+we can essentially access the elements in the DOM by JavaScript
+It gives access us to parsed doc(  document in js file  )
+
+console.dir( give you in object notation)
+
+queryselctor selects the first element it finds
+queryselectorall ( with backdrop class) and would return an array.
+
+style property allows us to access inline styles
+
+
+modal.className=open will overwrite the property to class = "open"
+
+remove the open class model.classList.remove('open')
+
+
+my device.io
+
+media queries allows us ot change the deign as per different device sizes.
+view port translate the pxiel(i.e hardware to software)
+
+
+**********Flexbox*********
+parent=flex container
+property:
+display:flex;
+flex-flow;
+justify-content
+align-content
+align-items
+
+children=flex items
+
+property"
+order:
+flex:
+align-self:
+
+
+while applying flex-box: we need to make sure we don't have text align , vetical align and display inline block block and so on.....
+
